@@ -245,6 +245,7 @@ $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
 \usepackage{xcolor}
+\definecolor{ibero}{HTML}{E53E46}
 \definecolor{default-linkcolor}{HTML}{A50000}
 \definecolor{default-filecolor}{HTML}{A50000}
 \definecolor{default-citecolor}{HTML}{4077C0}
@@ -850,6 +851,9 @@ $else$
 $if(disable-header-and-footer)$
 $else$
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
+
+\setheadsepline{1pt}[\color{ibero}]
+\setfootsepline{1pt}[\color{ibero}]
 
 \newpairofpagestyles{eisvogel-header-footer}{
   \clearpairofpagestyles
