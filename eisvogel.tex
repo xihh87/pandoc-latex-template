@@ -428,6 +428,21 @@ $endif$
 \usepackage{float}
 \floatplacement{figure}{$if(float-placement-figure)$$float-placement-figure$$else$H$endif$}
 
+\usepackage{combofont}
+\usepackage{fontspec}
+\setupcombofont{multiscript-regular}{
+  {file:DejaVuSans.ttf} at #1pt,
+  {file:NotoSansCJK-Regular.ttc(0)} at #1pt,
+  {file:lmsans10-regular.otf:\combodefaultfeat} at #1pt
+}{
+  {} ,
+  fallback,
+  fallback
+}
+\DeclareFontFamily{TU}{multiscript}{}
+\DeclareFontShape {TU}{multiscript}{m}{n}{<->combo*multiscript-regular}{}
+\fontfamily{multiscript}\selectfont
+
 $for(header-includes)$
 $header-includes$
 $endfor$
