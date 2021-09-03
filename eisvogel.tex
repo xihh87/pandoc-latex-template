@@ -443,6 +443,15 @@ $endif$
 \DeclareFontShape {TU}{multiscript}{m}{n}{<->combo*multiscript-regular}{}
 \fontfamily{multiscript}\selectfont
 
+\definecolor{subtlegray}{rgb}{0.9764705882352941, 0.9764705882352941, 0.9803921568627451}
+\def\FormColor{subtlegray}
+
+\def\checkbox{\CheckBox[width=2em,borderwidth=0,backgroundcolor=\FormColor]{\null}}
+\def\fivestars{\checkbox\checkbox\checkbox\checkbox\checkbox\newline}
+\def\textline{\TextField[width=\linewidth,backgroundcolor=\FormColor,borderwidth=0,height=1.5em]{\null}\newline}
+\def\textbox{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\textwidth,height=10.5em,multiline=true,]{\null}\newline}
+
+
 $for(header-includes)$
 $header-includes$
 $endfor$
