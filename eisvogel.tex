@@ -446,10 +446,11 @@ $endif$
 \definecolor{subtlegray}{rgb}{0.9764705882352941, 0.9764705882352941, 0.9803921568627451}
 \def\FormColor{subtlegray}
 
+\usepackage{linegoal}
 \newcounter{checkbox}
 \def\checkbox[1][\null]{\CheckBox[width=2em,borderwidth=0,backgroundcolor=\FormColor,name=chk\stepcounter{checkbox}]{#1}}
 \def\fivestars{\checkbox\checkbox\checkbox\checkbox\checkbox\newline}
-\def\textline[1][\null]{\TextField[width=\linewidth,backgroundcolor=\FormColor,borderwidth=0,height=1.5em]{#1}\newline}
+\def\textline[1][\null]{\TextField[width=\linegoal,backgroundcolor=\FormColor,borderwidth=0,height=1.5em]{#1}\newline}
 \def\textbox[1][\null]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\textwidth,height=10.5em,multiline=true,]{#1}\newline}
 
 
