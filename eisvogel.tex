@@ -446,13 +446,14 @@ $endif$
 \definecolor{subtlegray}{rgb}{0.9764705882352941, 0.9764705882352941, 0.9803921568627451}
 \def\FormColor{subtlegray}
 
+\usepackage{adjustbox}
 \usepackage{linegoal}
 \newcounter{chkbx}
 \newcommand\checkbox[1][~]{\CheckBox[width=2em,borderwidth=0,backgroundcolor=\FormColor,name=\thechkbx]{#1}\stepcounter{chkbx}}
 \newcommand\fivestars{\checkbox\checkbox\checkbox\checkbox\checkbox\newline}
-\newcommand\textline[1][~]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=1.5em,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}
-\newcommand\textbox[1][~]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=10.5em,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}
-\newcommand\textarea[1][~]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=4cm,height=10.5em,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}
+\newcommand\textline[1][~]{\adjustbox{valign=T}\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=1.5em,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}}
+\newcommand\textbox[1][~]{\adjustbox{valign=T}\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=10.5em,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}}
+\newcommand\textarea[1][~]{\adjustbox{valign=T}{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=4cm,height=3cm,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}}}
 
 
 $for(header-includes)$
