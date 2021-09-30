@@ -452,6 +452,7 @@ $endif$
 \newcommand\fivestars{\checkbox\checkbox\checkbox\checkbox\checkbox\newline}
 \newcommand\textline[1][~]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=1.5em,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}
 \newcommand\textbox[1][~]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=10.5em,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}
+\newcommand\textarea[1][~]{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=4cm,height=10.5em,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}\newline}
 
 
 $for(header-includes)$
@@ -884,9 +885,6 @@ $else$
 $if(disable-header-and-footer)$
 $else$
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
-
-\let\oldtextbf\textbf
-\renewcommand{\textbf}[1]{\textcolor{gris-texto}{\oldtextbf{#1}}}
 
 \setheadsepline{1pt}[\color{ibero-logo}]
 \setfootsepline{1pt}[\color{ibero-logo}]
