@@ -455,6 +455,15 @@ $endif$
 \newcommand\textbox[1][~]{\adjustbox{valign=T}{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=\linegoal,height=10.5em,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}}\newline}
 \newcommand\textarea[1][~]{\adjustbox{valign=T}{\TextField[borderwidth=0,backgroundcolor=\FormColor,width=3.5cm,height=3cm,multiline=true,name=\thechkbx]{#1}\stepcounter{chkbx}}}
 
+$if(watermark)$
+\usepackage{background}
+\backgroundsetup{
+  contents={$watermark},
+  scale=$if($watermark-scale)${$watermark-scale}$else$10$endif$,
+  angle=$if($watermark-angle)${$watermark-angle}$else$45$endif$,
+  opacity=$if($watermark-opacity)${$watermark-opacity}$else$0.15$endif$,
+}
+$endif$
 
 $for(header-includes)$
 $header-includes$
